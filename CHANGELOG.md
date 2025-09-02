@@ -1,10 +1,10 @@
 Change Log
 ==========
 
-2.0.0
+1.1.1
 -----
 
-* Code cleanup.
+* Code cleanup. Adopted io.arxila namespace.
 
 
 1.1

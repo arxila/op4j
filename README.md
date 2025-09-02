@@ -2,14 +2,14 @@
 > [!NOTE]
 > A note from the author:
 > 
-> This library is from 2009/2010. In 2014 Java 8 was released, bringing with it lambdas, streams and
-> many other modern Java features that made op4j obsolete. It previously existed as `org.op4j` packages
-> in the [op4j](https://github.com/op4j) GitHub organization but has now been moved under the Arxila OSS _umbrella_ 
-> in order to keep it near other small projects created by @danielfernandez.
+> This library was developed and published in 2010. But in 2014 Java 8 was released, bringing with it lambdas,
+> streams and many other modern Java features that made op4j obsolete. It previously existed as `org.op4j` packages
+> in the [op4j](https://github.com/op4j) GitHub organization but was moved under the Arxila OSS _umbrella_ 
+> to group it with other small projects created by [@danielfernandez](https://github.com/danielfernandez).
 > 
-> This library is no longer maintained (please use lambdas and collection streams instead), but it is kept here for
-> historical reference. Please look at it the same way you would look at a trilobite in a museum. A lot of effort
-> went into it back in the day, and I wouldn't want to just delete it. :)
+> This library is no longer maintained (please use JDK lambdas and collection streams instead), but it is kept here
+> for historical reference. A lot of effort went into it back in the day, and I wouldn't want to just delete
+> it. Please look at it the same way you would look at an artifact in a museum. :)
 
 
 
@@ -49,7 +49,7 @@ From Maven:
 
 ```xml
 <dependency>
-  <groupId>io.arxila.javaruntype</groupId>
+  <groupId>io.arxila.op4j</groupId>
   <artifactId>op4j</artifactId>
   <version>{version}</version>
 </dependency>
