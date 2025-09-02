@@ -2,10 +2,10 @@
 > [!NOTE]
 > A note from the author:
 > 
-> This library was developed and published in 2010. But in 2014 Java 8 was released, bringing with it lambdas,
-> streams and many other modern Java features that made op4j obsolete. It previously existed as `org.op4j` packages
-> in the [op4j](https://github.com/op4j) GitHub organization but was moved under the Arxila OSS _umbrella_ 
-> to group it with other small projects created by [@danielfernandez](https://github.com/danielfernandez).
+> The op4j library was developed and published in 2010. However, lambdas, streams and other Java features that
+> came with Java 8 in 2014, as well as other features of more modern versions, made this library obsolete. The
+> library previously existed as `org.op4j` packages in the [op4j](https://github.com/op4j) GitHub organization but was moved to be
+> under the Arxila OSS _umbrella_ in order to group it with other small projects created by [@danielfernandez](https://github.com/danielfernandez).
 > 
 > This library is no longer maintained (please use JDK lambdas and collection streams instead), but it is kept here
 > for historical reference. A lot of effort went into it back in the day, and I wouldn't want to just delete
