@@ -1,17 +1,17 @@
 package io.arxila.op4j;
 
 
+import io.arxila.op4j.functions.FnString;
 import java.math.BigDecimal;
 import java.util.Locale;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import junit.framework.TestCase;
-
-import org.junit.Before;
-import org.junit.Test;
-import io.arxila.op4j.functions.FnString;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SuppressWarnings (value = "cast")
-public class IsValidXXXTest extends TestCase {
+public class IsValidXXXTest {
 
     private String biggerThanInteger = String.valueOf((long)Integer.MAX_VALUE + 1);
     private String smallerThanInteger = String.valueOf((long)Integer.MIN_VALUE - 1);
@@ -65,8 +65,7 @@ public class IsValidXXXTest extends TestCase {
 
     private String negativeInteger = "-2";
     
-    @Override
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
     }
 

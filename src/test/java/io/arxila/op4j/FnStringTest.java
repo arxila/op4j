@@ -1,19 +1,17 @@
 package io.arxila.op4j;
 
 
-import java.util.List;
-
-import junit.framework.TestCase;
-
-import org.junit.Before;
-import org.junit.Test;
 import io.arxila.op4j.functions.FnString;
+import java.util.List;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SuppressWarnings (value = "cast")
-public class FnStringTest extends TestCase {
+public class FnStringTest {
 	
-	@Override
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		
 	}

@@ -20,19 +20,18 @@
 
 package io.arxila.op4j;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.math.RandomUtils;
-import org.apache.commons.lang3.time.StopWatch;
 import io.arxila.javaruntype.type.Types;
-import org.junit.Test;
 import io.arxila.op4j.functions.FnNumber;
 import io.arxila.op4j.functions.FnString;
 import io.arxila.op4j.operators.impl.op.array.Level0ArrayOperator;
 import io.arxila.op4j.operators.impl.op.list.Level0ListOperator;
 import io.arxila.op4j.operators.impl.op.list.Level1ListElementsOperator;
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.RandomUtils;
+import org.apache.commons.lang3.time.StopWatch;
+import org.junit.jupiter.api.Test;
 
 /**
  * 
@@ -45,6 +44,8 @@ public class BenchmarkTest {
 
 	private static int STRUCTURE_SIZE = 1000;
 	private static int ITERATIONS = 1000;
+
+    private static RandomUtils randomUtils = new RandomUtils();
 	
 	
 	@Test
@@ -60,7 +61,7 @@ public class BenchmarkTest {
 			final StopWatch stopWatch1 = new StopWatch();
 			final StopWatch stopWatch2 = new StopWatch();
 			
-			int seed = RandomUtils.nextInt(2);
+			int seed = RandomUtils.nextInt(0,2);
 			boolean op4jFirst = 
 				Op.on(seed).exec(FnNumber.toBoolean()).get().booleanValue();
 			

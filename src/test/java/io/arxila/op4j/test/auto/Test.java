@@ -1,16 +1,13 @@
 package io.arxila.op4j.test.auto;
 
+import io.arxila.javaruntype.type.Type;
+import io.arxila.op4j.Op;
+import io.arxila.op4j.exceptions.ExecutionException;
 import java.beans.Expression;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import io.arxila.javaruntype.type.Type;
-import org.junit.Ignore;
-import io.arxila.op4j.Op;
-import io.arxila.op4j.exceptions.ExecutionException;
-
-@Ignore
 public class Test {
 	
 	public static final <T> Object testOn(T target,

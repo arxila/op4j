@@ -1,9 +1,6 @@
 package io.arxila.op4j.test.auto;
 
-import org.junit.Ignore;
 
-
-@Ignore
 public class TestOperation {
 
 	private final String methodName;

@@ -1,22 +1,7 @@
 package io.arxila.op4j;
 
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.MathContext;
-import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-
-import junit.framework.TestCase;
-
-import org.apache.commons.lang3.ArrayUtils;
 import io.arxila.javaruntype.type.Types;
-import org.junit.Before;
-import org.junit.Test;
 import io.arxila.op4j.functions.ExecCtx;
 import io.arxila.op4j.functions.FnBigDecimal;
 import io.arxila.op4j.functions.FnBigInteger;
@@ -28,14 +13,27 @@ import io.arxila.op4j.functions.FnNumber;
 import io.arxila.op4j.functions.FnShort;
 import io.arxila.op4j.functions.IFunction;
 import io.arxila.op4j.test.auto.TestOperation;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.math.MathContext;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import org.apache.commons.lang3.ArrayUtils;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings (value = "cast")
-public class MathFuncsTest extends TestCase {
+public class MathFuncsTest {
 
 	private List<Double> data;
 
-	@Override
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		this.data = new ArrayList<Double>();
 		this.data.add(Double.valueOf(34));

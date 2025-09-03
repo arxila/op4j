@@ -7,13 +7,10 @@ import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.math.RandomUtils;
-import org.junit.Ignore;
+import org.apache.commons.lang3.RandomUtils;
 
 @SuppressWarnings("unchecked")
-@Ignore
 class AssortedTestsData {
 
 	
