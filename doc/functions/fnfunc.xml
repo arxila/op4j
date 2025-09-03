@@ -1,0 +1,76 @@
+<!DOCTYPE document PUBLIC
+  "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+  "http://maven.apache.org/dtd/xdoc_1_0.dtd">
+
+
+<document>
+  <properties>
+    <title>Functions: FnFunc</title>    
+  </properties>
+  <body>
+  
+    <section name="Functions: FnFunc">
+
+      
+
+      <subsection name="1. Overview">
+
+        <p>
+            <b><a href="http://www.op4j.org/apidocs/org/op4j/functions/FnFunc.html">FnFunc</a></b> is a <em>function hub class</em>
+            containing basic static methods that operate on Objects 
+        </p>
+        
+      </subsection>
+
+      <subsection name="2. Functions">
+
+<table border="0">
+<thead><tr><th>Function name</th><th>Type</th><th width="240px">Params</th><th>Description</th></tr></thead>
+<tbody>
+<tr class="b"><td><b>chain</b></td><td>Function&lt;X,Z&gt;</td><td>IFunction&lt;X,Y&gt; fn1<br />IFunction&lt;? super Y,Z&gt; fn2</td><td><p> Chains two functions together. The returned function executes the specified functions in sequence, being <tt>fn2</tt> executed on the results of <tt>fn1</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>ifFalseThen</b></td><td>Function&lt;T,T&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,? extends T&gt; thenFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the result of executing <tt>condition</tt> on the target object is false. </p> <p> The built function cannot change the return type (receives <tt>T</tt> and returns <tt>T</tt>) because the <tt>thenFunction</tt> could remain unexecuted, and so the type returned by <tt>thenFunction</tt> must be the same as the type required as input, in order to keep consistency. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>ifFalseThenElse</b></td><td>Function&lt;T,R&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,R&gt; thenFunction<br />IFunction&lt;? super T,R&gt; elseFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the result of executing <tt>condition</tt> on the target object is false, and will execute the specified function <tt>elseFunction</tt> otherwise. </p> <p> The built function can effectively change the target type (receive <tt>T</tt> and  return <tt>R</tt>) if both <tt>thenFunction</tt> and <tt>elseFunction</tt> return the same type, and this is different than the target type <tt>T</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>ifNotNullAndFalseThen</b></td><td>Function&lt;T,T&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,? extends T&gt; thenFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is not null and the result of executing <tt>condition</tt> on  it is false. </p> <p> The built function cannot change the return type (receives <tt>T</tt> and returns <tt>T</tt>) because the <tt>thenFunction</tt> could remain unexecuted, and so the type returned by <tt>thenFunction</tt> must be the same as the type required as input, in order to keep consistency. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>ifNotNullAndFalseThenElse</b></td><td>Function&lt;T,R&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,R&gt; thenFunction<br />IFunction&lt;? super T,R&gt; elseFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is not null and the result of executing <tt>condition</tt>  on the target object is false, and will execute the specified function  <tt>elseFunction</tt> otherwise. </p> <p> The built function can effectively change the target type (receive <tt>T</tt> and  return <tt>R</tt>) if both <tt>thenFunction</tt> and <tt>elseFunction</tt> return the same type, and this is different than the target type <tt>T</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>ifNotNullAndTrueThen</b></td><td>Function&lt;T,T&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,? extends T&gt; thenFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is not null and the result of executing <tt>condition</tt> on  it is true. </p> <p> The built function cannot change the return type (receives <tt>T</tt> and returns <tt>T</tt>) because the <tt>thenFunction</tt> could remain unexecuted, and so the type returned by <tt>thenFunction</tt> must be the same as the type required as input, in order to keep consistency. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>ifNotNullAndTrueThenElse</b></td><td>Function&lt;T,R&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,R&gt; thenFunction<br />IFunction&lt;? super T,R&gt; elseFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is not null and the result of executing <tt>condition</tt>  on the target object is true, and will execute the specified function  <tt>elseFunction</tt> otherwise. </p> <p> The built function can effectively change the target type (receive <tt>T</tt> and  return <tt>R</tt>) if both <tt>thenFunction</tt> and <tt>elseFunction</tt> return the same type, and this is different than the target type <tt>T</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>ifNotNullThen</b></td><td>Function&lt;T,T&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T,? extends T&gt; thenFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is not null. </p> <p> The built function cannot change the return type (receives <tt>T</tt> and returns <tt>T</tt>) because the <tt>thenFunction</tt> could remain unexecuted, and so the type returned by <tt>thenFunction</tt> must be the same as the type required as input, in order to keep consistency. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>ifNotNullThenElse</b></td><td>Function&lt;T,R&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T,R&gt; thenFunction<br />IFunction&lt;? super T,R&gt; elseFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is not null, and will execute the specified function  <tt>elseFunction</tt> otherwise. </p> <p> The built function can effectively change the target type (receive <tt>T</tt> and  return <tt>R</tt>) if both <tt>thenFunction</tt> and <tt>elseFunction</tt> return the same type, and this is different than the target type <tt>T</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>ifNullOrFalseThen</b></td><td>Function&lt;T,T&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,? extends T&gt; thenFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is null or the result of executing <tt>condition</tt> on  it is false. </p> <p> The built function cannot change the return type (receives <tt>T</tt> and returns <tt>T</tt>) because the <tt>thenFunction</tt> could remain unexecuted, and so the type returned by <tt>thenFunction</tt> must be the same as the type required as input, in order to keep consistency. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>ifNullOrFalseThenElse</b></td><td>Function&lt;T,R&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,R&gt; thenFunction<br />IFunction&lt;? super T,R&gt; elseFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is null or the result of executing <tt>condition</tt>  on the target object is false, and will execute the specified function  <tt>elseFunction</tt> otherwise. </p> <p> The built function can effectively change the target type (receive <tt>T</tt> and  return <tt>R</tt>) if both <tt>thenFunction</tt> and <tt>elseFunction</tt> return the same type, and this is different than the target type <tt>T</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>ifNullOrTrueThen</b></td><td>Function&lt;T,T&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,? extends T&gt; thenFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is null or the result of executing <tt>condition</tt> on  it is true. </p> <p> The built function cannot change the return type (receives <tt>T</tt> and returns <tt>T</tt>) because the <tt>thenFunction</tt> could remain unexecuted, and so the type returned by <tt>thenFunction</tt> must be the same as the type required as input, in order to keep consistency. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>ifNullOrTrueThenElse</b></td><td>Function&lt;T,R&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,R&gt; thenFunction<br />IFunction&lt;? super T,R&gt; elseFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is null or the result of executing <tt>condition</tt>  on the target object is true, and will execute the specified function  <tt>elseFunction</tt> otherwise. </p> <p> The built function can effectively change the target type (receive <tt>T</tt> and  return <tt>R</tt>) if both <tt>thenFunction</tt> and <tt>elseFunction</tt> return the same type, and this is different than the target type <tt>T</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>ifNullThen</b></td><td>Function&lt;T,T&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T,? extends T&gt; thenFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is null. </p> <p> The built function cannot change the return type (receives <tt>T</tt> and returns <tt>T</tt>) because the <tt>thenFunction</tt> could remain unexecuted, and so the type returned by <tt>thenFunction</tt> must be the same as the type required as input, in order to keep consistency. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>ifNullThenElse</b></td><td>Function&lt;T,R&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T,R&gt; thenFunction<br />IFunction&lt;? super T,R&gt; elseFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the target object is null, and will execute the specified function  <tt>elseFunction</tt> otherwise. </p> <p> The built function can effectively change the target type (receive <tt>T</tt> and  return <tt>R</tt>) if both <tt>thenFunction</tt> and <tt>elseFunction</tt> return the same type, and this is different than the target type <tt>T</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>ifTrueThen</b></td><td>Function&lt;T,T&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,? extends T&gt; thenFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the result of executing <tt>condition</tt> on the target object is true. </p> <p> The built function cannot change the return type (receives <tt>T</tt> and returns <tt>T</tt>) because the <tt>thenFunction</tt> could remain unexecuted, and so the type returned by <tt>thenFunction</tt> must be the same as the type required as input, in order to keep consistency. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>ifTrueThenElse</b></td><td>Function&lt;T,R&gt;</td><td>Type&lt;T&gt; targetType<br />IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T,R&gt; thenFunction<br />IFunction&lt;? super T,R&gt; elseFunction</td><td><p> Builds a function that will execute the specified function <tt>thenFunction</tt>  only if the result of executing <tt>condition</tt> on the target object is true, and will execute the specified function <tt>elseFunction</tt> otherwise. </p> <p> The built function can effectively change the target type (receive <tt>T</tt> and  return <tt>R</tt>) if both <tt>thenFunction</tt> and <tt>elseFunction</tt> return the same type, and this is different than the target type <tt>T</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>whileFalse</b></td><td>Function&lt;T,T&gt;</td><td>IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T, T&gt; function</td><td><p> Executes the specified <tt>function</tt> iteratively (first on the target, then  on the result of the previous iteration) while the result of executing the  <tt>condition</tt> function on the target object (or the result of the previous <tt>function</tt> iteration) is false. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>whileTrue</b></td><td>Function&lt;T,T&gt;</td><td>IFunction&lt;? super T, Boolean&gt; condition<br />IFunction&lt;? super T, T&gt; function</td><td><p> Executes the specified <tt>function</tt> iteratively (first on the target, then  on the result of the previous iteration) while the result of executing the  <tt>condition</tt> function on the target object (or the result of the previous <tt>function</tt> iteration) is true. </p></td></tr>
+</tbody></table>
+
+
+</subsection>
+</section>
+</body>
+</document>
+
+
+

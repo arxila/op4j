@@ -1,0 +1,114 @@
+<!DOCTYPE document PUBLIC
+  "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+  "http://maven.apache.org/dtd/xdoc_1_0.dtd">
+
+
+<document>
+  <properties>
+    <title>Functions: FnDate</title>    
+  </properties>
+  <body>
+  
+    <section name="Functions: FnDate">
+
+      
+
+      <subsection name="1. Overview">
+
+        <p>
+        	<b><a href="http://www.op4j.org/apidocs/org/op4j/functions/FnDate.html">FnDate</a></b> is a <em>function hub class</em>
+        	containing a lot of static methods to work with Date objects. Those static methods return functions that take 
+        	a <b>Date</b> object either as its input or output (depending on the function). It includes 
+        	conversions to String, to Date and adding days to a Date among others.        	  
+        </p>
+        
+      </subsection>
+
+      <subsection name="2. Functions">
+
+
+<table border="0">
+<thead><tr><th>Function name</th><th>Type</th><th width="240px">Params</th><th>Description</th></tr></thead>
+<tbody>
+<tr class="b"><td><b>add</b></td><td>Function&lt;Date,Date&gt;</td><td>int calendarField<br />int amount</td><td><p> Modifies a Date by adding a positive or negative amount to one of its fields.  </p> <p> Fields are specified by means of <tt>java.util.Calendar</tt> constants, like <tt>FnDate.add(Calendar.DAY_OF_MONTH, 1)</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>addDays</b></td><td>Function&lt;Date,Date&gt;</td><td>int amount</td><td><p> Modifies a Date by adding a positive or negative amount to one the "day" property (<tt>java.util.Calendar.DATE</tt>).  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>addHours</b></td><td>Function&lt;Date,Date&gt;</td><td>int amount</td><td><p> Modifies a Date by adding a positive or negative amount to one the "hour" property (<tt>java.util.Calendar.HOUR</tt>).  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>addMilliseconds</b></td><td>Function&lt;Date,Date&gt;</td><td>int amount</td><td><p> Modifies a Date by adding a positive or negative amount to one the "millisecond" property (<tt>java.util.Calendar.MILLISECOND</tt>).  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>addMinutes</b></td><td>Function&lt;Date,Date&gt;</td><td>int amount</td><td><p> Modifies a Date by adding a positive or negative amount to one the "minutes" property (<tt>java.util.Calendar.MINUTES</tt>).  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>addMonths</b></td><td>Function&lt;Date,Date&gt;</td><td>int amount</td><td><p> Modifies a Date by adding a positive or negative amount to one the "month" property (<tt>java.util.Calendar.MONTH</tt>).  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>addWeeks</b></td><td>Function&lt;Date,Date&gt;</td><td>int amount</td><td><p> Modifies a Date by adding a positive or negative amount to one the "week" property (<tt>java.util.Calendar.WEEK</tt>).  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>addYears</b></td><td>Function&lt;Date,Date&gt;</td><td>int amount</td><td><p> Modifies a Date by adding a positive or negative amount to one the "year" property (<tt>java.util.Calendar.YEAR</tt>).  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>after</b></td><td>Function&lt;Date,Boolean&gt;</td><td>Date date</td><td><p> Determines whether the target Date represents a moment in time after the Date specified as a parameter. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>before</b></td><td>Function&lt;Date,Boolean&gt;</td><td>Date date</td><td><p> Determines whether the target Date represents a moment in time before the Date specified as a parameter. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>eq</b></td><td>Function&lt;Object,Boolean&gt;</td><td>Date object</td><td><p> Determines whether the target object and the specified object are equal by calling the <tt>equals</tt> method on the target object. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>fieldIntegerArrayToDate</b></td><td>Function&lt;Integer[], Date&gt;</td><td></td><td><p> Converts an Integer[] containing the components of a date to a  <tt>java.util.Date</tt> object. </p> <p> The target array can contain the following combinations of elements, in the specified order: </p> <ul>   <li>year, month, day</li>   <li>year, month, day, hour, minute</li>   <li>year, month, day, hour, minute, second</li>   <li>year, month, day, hour, minute, second, millisecond</li> </ul></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>fieldIntegerListToDate</b></td><td>Function&lt;List&lt;Integer&gt;, Date&gt;</td><td></td><td><p> Converts a List&lt;Integer&gt; containing the components of a date to a  <tt>java.util.Date</tt> object. </p> <p> The target list can contain the following combinations of elements, in the specified order: </p> <ul>   <li>year, month, day</li>   <li>year, month, day, hour, minute</li>   <li>year, month, day, hour, minute, second</li>   <li>year, month, day, hour, minute, second, millisecond</li> </ul></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>fieldStringArrayToDate</b></td><td>Function&lt;String[], Date&gt;</td><td></td><td><p> Converts a String[] containing the components of a date to a  <tt>java.util.Date</tt> object. </p> <p> The target array can contain the following combinations of elements,  all of them in numeric format, in the specified order: </p> <ul>   <li>year, month, day</li>   <li>year, month, day, hour, minute</li>   <li>year, month, day, hour, minute, second</li>   <li>year, month, day, hour, minute, second, millisecond</li> </ul></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>fieldStringListToDate</b></td><td>Function&lt;List&lt;String&gt;, Date&gt;</td><td></td><td><p> Converts a List&lt;String&gt; containing the components of a date to a  <tt>java.util.Date</tt> object. </p> <p> The target list can contain the following combinations of elements,  all of them in numeric format, in the specified order: </p> <ul>   <li>year, month, day</li>   <li>year, month, day, hour, minute</li>   <li>year, month, day, hour, minute, second</li>   <li>year, month, day, hour, minute, second, millisecond</li> </ul></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>isNotNull</b></td><td>Function&lt;Object,Boolean&gt;</td><td></td><td><p> Determines whether the target object is null or not. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>isNull</b></td><td>Function&lt;Object,Boolean&gt;</td><td></td><td><p> Determines whether the target object is null or not. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>notEq</b></td><td>Function&lt;Object,Boolean&gt;</td><td>Date object</td><td><p> Determines whether the target object and the specified object are NOT equal by calling the <tt>equals</tt> method on the target object. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>round</b></td><td>Function&lt;Date,Date&gt;</td><td>int calendarField</td><td><p> Rounds the target Date, setting the specified field as the  most significant field. </p> <p> Based on <tt>org.apache.commons.lang.time.DateUtils.round()</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>set</b></td><td>Function&lt;Date,Date&gt;</td><td>int calendarField<br />int value</td><td><p> Modifies a Date by setting one of its to the specified value.  </p> <p> Fields are specified by means of <tt>java.util.Calendar</tt> constants, like <tt>FnDate.set(Calendar.DAY_OF_MONTH, 12)</tt>. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>setDay</b></td><td>Function&lt;Date,Date&gt;</td><td>int value</td><td><p> Modifies a Date by setting the "day" property (<tt>java.util.Calendar.DATE</tt>) to the specified value.  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>setHour</b></td><td>Function&lt;Date,Date&gt;</td><td>int value</td><td><p> Modifies a Date by setting the "hour" property (<tt>java.util.Calendar.HOUR</tt>) to the specified value.  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>setMillisecond</b></td><td>Function&lt;Date,Date&gt;</td><td>int value</td><td><p> Modifies a Date by setting the "millisecond" property (<tt>java.util.Calendar.MILLISECOND</tt>) to the specified value.  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>setMinute</b></td><td>Function&lt;Date,Date&gt;</td><td>int value</td><td><p> Modifies a Date by setting the "minute" property (<tt>java.util.Calendar.MINUTE</tt>) to the specified value.  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>setMonth</b></td><td>Function&lt;Date,Date&gt;</td><td>int value</td><td><p> Modifies a Date by setting the "month" property (<tt>java.util.Calendar.MONTH</tt>) to the specified value.  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>setWeek</b></td><td>Function&lt;Date,Date&gt;</td><td>int value</td><td><p> Modifies a Date by setting the "week" property (<tt>java.util.Calendar.WEEK_OF_YEAR</tt>) to the specified value.  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>setYear</b></td><td>Function&lt;Date,Date&gt;</td><td>int value</td><td><p> Modifies a Date by setting the "year" property (<tt>java.util.Calendar.YEAR</tt>) to the specified value.  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>timeInMillisToDate</b></td><td>Function&lt;Long,Date&gt;</td><td></td><td><p> Converts the target Long (representing a time in milliseconds) into a Date.  </p></td></tr>
+<tr class="b"><td><b>timeInMillisToDate</b></td><td>Function&lt;Long,Date&gt;</td><td>int truncateField</td><td><p> Converts the target Long (representing a time in milliseconds) into a Date, truncating by the specified field (<tt>java.util.Calendar</tt> constant field).  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>timestampToDate</b></td><td>Function&lt;Timestamp,Date&gt;</td><td></td><td><p> Converts the target <tt>java.sql.Timestamp</tt> into a Date.  </p></td></tr>
+<tr class="b"><td><b>timestampToDate</b></td><td>Function&lt;Timestamp,Date&gt;</td><td>int truncateField</td><td><p> Converts the target <tt>java.sql.Timestamp</tt> into a Date, truncating by the specified field (<tt>java.util.Calendar</tt> constant field). </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>toCalendar</b></td><td>Function&lt;Date,Calendar&gt;</td><td></td><td></td></tr>
+<tr class="b"><td><b>toCalendar</b></td><td>Function&lt;Date,Calendar&gt;</td><td>int truncateField</td><td></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>toStr</b></td><td>Function&lt;Date,String&gt;</td><td>String pattern</td><td><p> Converts the target Date into a String using the specified <tt>pattern</tt>. The pattern has to be written in the <tt>java.text.SimpleDateFormat</tt> format. </p> <p> As no locale is specified, if pattern includes locale-dependent texts  like month names (<tt>MMM</tt>) or week days (<tt>EEE</tt>), the default locale will be used for resolving these components.   </p></td></tr>
+<tr class="b"><td><b>toStr</b></td><td>Function&lt;Date,String&gt;</td><td>String pattern<br />Locale locale</td><td><p> Converts the target Date into a String using the specified <tt>pattern</tt>. The pattern has to be written in the <tt>java.text.SimpleDateFormat</tt> format,  and the specified locale will be used for text-based pattern components (like month names or week days). </p></td></tr>
+<tr class="a"><td><b>toStr</b></td><td>Function&lt;Date,String&gt;</td><td>String pattern<br />String locale</td><td><p> Converts the target Date into a String using the specified <tt>pattern</tt>. The pattern has to be written in the <tt>java.text.SimpleDateFormat</tt> format,  and the specified locale will be used for text-based pattern components (like month names or week days). </p></td></tr>
+<tr class="b"><td><b>toStr</b></td><td>Function&lt;Date,String&gt;</td><td>DateStyle dateStyle<br />TimeStyle timeStyle</td><td><p> Converts the target Date into a String using the specified date ( DateStyle)  and time ( TimeStyle) styles.  </p></td></tr>
+<tr class="a"><td><b>toStr</b></td><td>Function&lt;Date,String&gt;</td><td>DateStyle dateStyle<br />TimeStyle timeStyle<br />Locale locale</td><td><p> Converts the target Date into a String using the specified date ( DateStyle)  and time ( TimeStyle) styles, and resolving text-based components like month names using the specified locale.  </p></td></tr>
+<tr class="b"><td><b>toStr</b></td><td>Function&lt;Date,String&gt;</td><td>DateStyle dateStyle<br />TimeStyle timeStyle<br />String locale</td><td><p> Converts the target Calendar into a String using the specified date ( DateStyle)  and time ( TimeStyle) styles, and resolving text-based components like month names using the specified locale.  </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>truncate</b></td><td>Function&lt;Date,Date&gt;</td><td>int calendarField</td><td><p> Truncates the target Date, setting the specified field as the  most significant field. </p> <p> Based on <tt>org.apache.commons.lang.time.DateUtils.truncate()</tt>. </p></td></tr>
+</tbody></table>
+
+
+
+</subsection>
+</section>
+</body>
+</document>
+
+
+

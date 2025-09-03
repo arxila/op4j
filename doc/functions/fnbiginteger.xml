@@ -1,0 +1,174 @@
+<!DOCTYPE document PUBLIC
+  "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+  "http://maven.apache.org/dtd/xdoc_1_0.dtd">
+
+
+<document>
+  <properties>
+    <title>Functions: FnBigInteger</title>    
+  </properties>
+  <body>
+  
+    <section name="Functions: FnBigInteger">
+
+      
+
+      <subsection name="1. Overview">
+
+        <p>
+            <b><a href="http://www.op4j.org/apidocs/org/op4j/functions/FnBigInteger.html">FnBigInteger</a></b> is a <em>function hub class</em>
+            containing a lot of static methods to work with BigInteger objects. Those static methods return functions that take 
+            an <b>BigInteger</b> object either as its input or output (depending on the function). It includes 
+            conversions to String, to an String representing a currency and logical operations between BigInteger objects 
+            among others.            
+        </p>
+        
+      </subsection>
+
+      <subsection name="2. Functions">
+
+
+<table border="0">
+<thead><tr><th>Function name</th><th>Type</th><th width="240px">Params</th><th>Description</th></tr></thead>
+<tbody>
+<tr class="b"><td><b>abs</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td></td><td><p> It returns the absolute value of the input </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>add</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Number add</td><td><p> It adds the given number to the target and returns the result </p></td></tr>
+<tr class="b"><td><b>add</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>byte add</td><td><p> It adds the given number to the target and returns the result </p></td></tr>
+<tr class="a"><td><b>add</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>short add</td><td><p> It adds the given number to the target and returns the result </p></td></tr>
+<tr class="b"><td><b>add</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>int add</td><td><p> It adds the given number to the target and returns the result </p></td></tr>
+<tr class="a"><td><b>add</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>long add</td><td><p> It adds the given number to the target and returns the result </p></td></tr>
+<tr class="b"><td><b>add</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>float add</td><td><p> It adds the given number to the target and returns the result </p></td></tr>
+<tr class="a"><td><b>add</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>double add</td><td><p> It adds the given number to the target and returns the result </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>avg</b></td><td>Function&lt;Iterable&lt;BigInteger&gt;, BigInteger&gt;</td><td></td><td><p> It returns the average of all the numbers in the  Iterable input object </p></td></tr>
+<tr class="a"><td><b>avg</b></td><td>Function&lt;Iterable&lt;BigInteger&gt;, BigInteger&gt;</td><td>RoundingMode roundingMode</td><td><p> It returns the average of all the numbers in the  Iterable input object. The given  RoundingMode will be used to round the output </p></td></tr>
+<tr class="b"><td><b>avg</b></td><td>Function&lt;Iterable&lt;BigInteger&gt;, BigInteger&gt;</td><td>MathContext mathContext</td><td><p> It returns the average of all the numbers in the  Iterable input object. The given  MathContext will be used to round and set the output precision </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>avgArray</b></td><td>Function&lt;BigInteger[], BigInteger&gt;</td><td></td><td><p> It returns the average of all the numbers in the input array </p></td></tr>
+<tr class="b"><td><b>avgArray</b></td><td>Function&lt;BigInteger[], BigInteger&gt;</td><td>RoundingMode roundingMode</td><td><p> It returns the average of all the numbers in the input array. The given  RoundingMode will be used to round the output </p></td></tr>
+<tr class="a"><td><b>avgArray</b></td><td>Function&lt;BigInteger[], BigInteger&gt;</td><td>MathContext mathContext</td><td><p> It returns the average of all the numbers in the input array. The given  MathContext will be used to round and set the output precision </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>between</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>Number min<br />Number max</td><td><p> Determines whether the target object is between min and max in value, this is, whether  <tt>target.compareTo(min) &gt;= 0 &amp;&amp; target.compareTo(max) &lt;= 0</tt>.  The target and the specified min and max have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>divideBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Number divisor</td><td><p> It divides the target element by the given divisor and returns its result </p></td></tr>
+<tr class="b"><td><b>divideBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>byte divisor</td><td><p> It divides the target element by the given divisor and returns its result </p></td></tr>
+<tr class="a"><td><b>divideBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>short divisor</td><td><p> It divides the target element by the given divisor and returns its result </p></td></tr>
+<tr class="b"><td><b>divideBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>int divisor</td><td><p> It divides the target element by the given divisor and returns its result </p></td></tr>
+<tr class="a"><td><b>divideBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>long divisor</td><td><p> It divides the target element by the given divisor and returns its result </p></td></tr>
+<tr class="b"><td><b>divideBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>float divisor</td><td><p> It divides the target element by the given divisor and returns its result </p></td></tr>
+<tr class="a"><td><b>divideBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>double divisor</td><td><p> It divides the target element by the given divisor and returns its result </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>eq</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>BigInteger object</td><td><p> Determines whether the target object and the specified object are equal by calling the <tt>equals</tt> method on the target object. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>eqBy</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>IFunction&lt;BigInteger,?&gt; by<br />Object object</td><td><p> Determines whether the result of executing the specified function  on the target object and the specified object parameter are equal by calling the <tt>equals</tt> method. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>eqValue</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>Number object</td><td><p> Determines whether the target object and the specified object are equal in value, this is, whether <tt>target.compareTo(object) == 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>eqValueBy</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>IFunction&lt;BigInteger,?&gt; by<br />Object object</td><td><p> Determines whether the result of executing the specified function on the target object and the specified object parameter are equal in value, this is, whether <tt>functionResult.compareTo(object) == 0</tt>.  Both the function result and the specified object have to implement   Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>greaterOrEqTo</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>Number object</td><td><p> Determines whether the target object is greater or equal to the specified object in value, this is, whether <tt>target.compareTo(object) &gt;= 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>greaterOrEqToBy</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>IFunction&lt;BigInteger,?&gt; by<br />Object object</td><td><p> Determines whether the result of executing the specified function on the target object is greater or equal to the specified object parameter in value, this is, whether <tt>functionResult.compareTo(object) &gt;= 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>greaterThan</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>Number object</td><td><p> Determines whether the target object is greater than the specified object in value, this is, whether <tt>target.compareTo(object) > 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>greaterThanBy</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>IFunction&lt;BigInteger,?&gt; by<br />Object object</td><td><p> Determines whether the result of executing the specified function on the target object is greater than the specified object parameter in value, this is, whether <tt>functionResult.compareTo(object) > 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>isNotNull</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td></td><td><p> Determines whether the target object is null or not. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>isNull</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td></td><td><p> Determines whether the target object is null or not. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>lessOrEqTo</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>Number object</td><td><p> Determines whether the target object is less or equal to the specified object in value, this is, whether <tt>target.compareTo(object) &lt;= 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>lessOrEqToBy</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>IFunction&lt;BigInteger,?&gt; by<br />Object object</td><td><p> Determines whether the result of executing the specified function on the target object is less or equal to the specified object parameter in value, this is, whether <tt>functionResult.compareTo(object) &lt;= 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>lessThan</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>Number object</td><td><p> Determines whether the target object is less than the specified object in value, this is, whether <tt>target.compareTo(object) &lt; 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>lessThanBy</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>IFunction&lt;BigInteger,?&gt; by<br />Object object</td><td><p> Determines whether the result of executing the specified function on the target object is less than the specified object parameter in value, this is, whether <tt>functionResult.compareTo(object) &lt; 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>max</b></td><td>Function&lt;Iterable&lt;BigInteger&gt;, BigInteger&gt;</td><td></td><td><p> It returns the maximum number from an  Iterable input object </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>maxArray</b></td><td>Function&lt;BigInteger[], BigInteger&gt;</td><td></td><td><p> It returns the maximum number from the input array </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>min</b></td><td>Function&lt;Iterable&lt;BigInteger&gt;, BigInteger&gt;</td><td></td><td><p> It returns the minimum number from an  Iterable input object </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>minArray</b></td><td>Function&lt;BigInteger[], BigInteger&gt;</td><td></td><td><p> It returns the minimum number from the input array </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>byte module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr class="a"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>short module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr class="b"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>int module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr class="a"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>long module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr class="b"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Byte module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr class="a"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Short module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr class="b"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Integer module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr class="a"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Long module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr class="b"><td><b>module</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>BigInteger module</td><td><p> It performs a module operation and returns the value of (input mod module) which is always positive  (whereas remainder is not) </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>multiplyBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Number multiplicand</td><td><p> It multiplies target by multiplicand and returns its value </p></td></tr>
+<tr class="b"><td><b>multiplyBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>byte multiplicand</td><td><p> It multiplies target by multiplicand and returns its value </p></td></tr>
+<tr class="a"><td><b>multiplyBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>short multiplicand</td><td><p> It multiplies target by multiplicand and returns its value </p></td></tr>
+<tr class="b"><td><b>multiplyBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>int multiplicand</td><td><p> It multiplies target by multiplicand and returns its value </p></td></tr>
+<tr class="a"><td><b>multiplyBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>long multiplicand</td><td><p> It multiplies target by multiplicand and returns its value </p></td></tr>
+<tr class="b"><td><b>multiplyBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>float multiplicand</td><td><p> It multiplies target by multiplicand and returns its value </p></td></tr>
+<tr class="a"><td><b>multiplyBy</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>double multiplicand</td><td><p> It multiplies target by multiplicand and returns its value </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>notEq</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>BigInteger object</td><td><p> Determines whether the target object and the specified object are NOT equal by calling the <tt>equals</tt> method on the target object. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>notEqBy</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>IFunction&lt;BigInteger,?&gt; by<br />Object object</td><td><p> Determines whether the result of executing the specified function  on the target object and the specified object parameter are NOT equal by calling the <tt>equals</tt> method. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>notEqValue</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>Number object</td><td><p> Determines whether the target object and the specified object are NOT equal in value, this is, whether <tt>target.compareTo(object) != 0</tt>. Both the target and the specified object have to implement  Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>notEqValueBy</b></td><td>Function&lt;BigInteger,Boolean&gt;</td><td>IFunction&lt;BigInteger,?&gt; by<br />Object object</td><td><p> Determines whether the result of executing the specified function on the target object and the specified object parameter are NOT equal in value, this is, whether <tt>functionResult.compareTo(object) != 0</tt>.  Both the function result and the specified object have to implement   Comparable. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>pow</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>int power</td><td><p> It performs the operation target<sup>power</sup> and returns its value </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>remainder</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Number divisor</td><td><p> It divides the target element by the given divisor and returns the remainder (target % divisor) </p></td></tr>
+<tr class="b"><td><b>remainder</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>byte divisor</td><td><p> It divides the target element by the given divisor and returns the remainder (target % divisor) </p></td></tr>
+<tr class="a"><td><b>remainder</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>short divisor</td><td><p> It divides the target element by the given divisor and returns the remainder (target % divisor) </p></td></tr>
+<tr class="b"><td><b>remainder</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>int divisor</td><td><p> It divides the target element by the given divisor and returns the remainder (target % divisor) </p></td></tr>
+<tr class="a"><td><b>remainder</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>long divisor</td><td><p> It divides the target element by the given divisor and returns the remainder (target % divisor) </p></td></tr>
+<tr class="b"><td><b>remainder</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>float divisor</td><td><p> It divides the target element by the given divisor and returns the remainder (target % divisor) </p></td></tr>
+<tr class="a"><td><b>remainder</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>double divisor</td><td><p> It divides the target element by the given divisor and returns the remainder (target % divisor) </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>subtract</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>Number subtract</td><td><p> It subtracts the given number from the target and returns the result </p></td></tr>
+<tr class="a"><td><b>subtract</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>byte subtract</td><td><p> It subtracts the given number from the target and returns the result </p></td></tr>
+<tr class="b"><td><b>subtract</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>short subtract</td><td><p> It subtracts the given number from the target and returns the result </p></td></tr>
+<tr class="a"><td><b>subtract</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>int subtract</td><td><p> It subtracts the given number from the target and returns the result </p></td></tr>
+<tr class="b"><td><b>subtract</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>long subtract</td><td><p> It subtracts the given number from the target and returns the result </p></td></tr>
+<tr class="a"><td><b>subtract</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>float subtract</td><td><p> It subtracts the given number from the target and returns the result </p></td></tr>
+<tr class="b"><td><b>subtract</b></td><td>Function&lt;BigInteger, BigInteger&gt;</td><td>double subtract</td><td><p> It subtracts the given number from the target and returns the result </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>sum</b></td><td>Function&lt;Iterable&lt;BigInteger&gt;, BigInteger&gt;</td><td></td><td><p> It returns the sum of all the numbers in the  Iterable input object </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="b"><td><b>sumArray</b></td><td>Function&lt;BigInteger[], BigInteger&gt;</td><td></td><td><p> It returns the sum of all the numbers in the input array </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>toCurrencyStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td></td><td><p> It returns the  String representation of the target as a currency in the default  Locale </p></td></tr>
+<tr class="b"><td><b>toCurrencyStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>boolean groupingUsed</td><td><p> It returns the  String representation of the target as a currency in the default  Locale </p></td></tr>
+<tr class="a"><td><b>toCurrencyStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>Locale locale</td><td><p> It returns the  String representation of the target as a currency in the given  Locale </p></td></tr>
+<tr class="b"><td><b>toCurrencyStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>String locale</td><td><p> It returns the  String representation of the target as a currency in the given locale </p></td></tr>
+<tr class="a"><td><b>toCurrencyStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>Locale locale<br />boolean groupingUsed</td><td><p> It returns the  String representation of the target as a currency in the given  Locale </p></td></tr>
+<tr class="b"><td><b>toCurrencyStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>String locale<br />boolean groupingUsed</td><td><p> It returns the  String representation of the target as a currency in the given locale </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>toPercentStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td></td><td><p> A  String representing a percentage is created from the target number. </p></td></tr>
+<tr class="b"><td><b>toPercentStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>boolean groupingUsed</td><td><p> A  String representing a percentage is created from the target number either using grouping or not depending on the given parameter. So, </p> <code>toPercentStr(true) would return 100,000% if target number is 1000</code> <br /> <code>toPercentStr(false) would return 100000% if target number is 1000</code></td></tr>
+<tr class="a"><td><b>toPercentStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>Locale locale</td><td><p> A  String representing a percentage is created from the target number  in the given  Locale </p></td></tr>
+<tr class="b"><td><b>toPercentStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>String locale</td><td><p> A  String representing a percentage is created from the target number  in the given locale </p></td></tr>
+<tr class="a"><td><b>toPercentStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>Locale locale<br />boolean groupingUsed</td><td><p> A  String representing a percentage is created from the target number  in the given  Locale. Grouping will be used depending on the value of the groupingUsed parameter. </p></td></tr>
+<tr class="b"><td><b>toPercentStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>String locale<br />boolean groupingUsed</td><td><p> A  String representing a percentage is created from the target number  in the given locale. Grouping will be used depending on the value of the groupingUsed parameter. </p></td></tr>
+<tr bgcolor="#A4A4A4" class=""><td bgcolor="#A4A4A4" colspan="4"></td></tr>
+<tr class="a"><td><b>toStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td></td><td><p> It returns the  String representation of the input number </p></td></tr>
+<tr class="b"><td><b>toStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>boolean groupingUsed</td><td><p> It returns the  String representation of the input number either using or not using grouping </p></td></tr>
+<tr class="a"><td><b>toStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>Locale locale</td><td><p> It returns the  String representation of the target number in the given  Locale   </p></td></tr>
+<tr class="b"><td><b>toStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>String locale</td><td><p> It returns the  String representation of the target number in the given locale   </p></td></tr>
+<tr class="a"><td><b>toStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>Locale locale<br />boolean groupingUsed</td><td><p> It returns the  String representation of the target number in the given  Locale. Grouping  will be used depending on the value of the groupingUsed parameter   </p></td></tr>
+<tr class="b"><td><b>toStr</b></td><td>Function&lt;BigInteger,String&gt;</td><td>String locale<br />boolean groupingUsed</td><td><p> It returns the  String representation of the target number in the given locale. Grouping  will be used depending on the value of the groupingUsed parameter   </p></td></tr>
+</tbody></table>
+
+
+</subsection>
+</section>
+</body>
+</document>
+
+
