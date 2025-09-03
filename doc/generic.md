@@ -1,0 +1,222 @@
+# Working with objects of any type
+
+## Working with objects of any type (generic operators)
+
+A *generic operator* is what you will get when creating an expression (`Op.on(...)` or `Fn.on(...)`) on any object which is not an array, a list, a map or a set. This is, an operator which will let you execute actions on your objects, but not offer any special built-in features like iterating with `forEach()`.
+
+### Contents
+
+- Creating generic expressions
+- Returning results
+- Converting to arrays, lists, sets or maps
+- Executing functions
+- Selecting (conditional code)
+- Replacing
+
+---
+
+## 1. Creating generic expressions
+
+### Operation expressions
+
+Generic operation expressions are created on an object which is neither an array, nor a list, map or set:
+
+```java
+Op.on(object)...
+```
+
+Also, any operator on arrays, lists, maps or sets can be turned into a generic operator by executing the `generic()` action:
+
+```java
+Op.onList(...).generic().[GENERIC ACTIONS]...
+```
+
+### Function expressions
+
+Function expressions are created by specifying the input type:
+
+```java
+// Create a function which receives a String variable as input
+function = Fn.on(Types.STRING)...get();
+```
+
+---
+
+## 2. Returning results
+
+Generic operators, as all others, return their results by means of the `get()` action:
+
+```java
+newObject = Op.on(object)...get();
+```
+
+---
+
+## 3. Converting to arrays, lists, sets or maps
+
+Generic operators can convert their targets into *singleton* arrays, lists, sets or maps. This means creating one of these structures and then adding only one element (the target) to them.
+
+### Arrays
+
+For creating a singleton array:
+
+```java
+String[] array = Op.on(str).intoSingletonArrayOf(Types.STRING).get();
+```
+
+### Lists
+
+For creating a singleton list:
+
+```java
+List<String> list = Op.on(str).intoSingletonList().get();
+```
+
+### Sets
+
+For creating a singleton set:
+
+```java
+Set<String> set = Op.on(str).intoSingletonSet().get();
+```
+
+### Maps
+
+Maps are a little bit trickier, because each *element* of a map (a *map entry*) is in fact composed of two objects instead of one: a *key*, and a *value*.
+
+That is why, in order to obtain a map with a single entry from the generic operator's target, we will have to either apply a *map builder* function, or simply add (*zip*) another object as key or value.
+
+#### Using a Map Builder
+
+A Map Builder is a function which returns map entries (`IFunction<T,Map.Entry<K,V>>`), usually created by extending the abstract class `org.op4j.functions.MapBuilder`, and which provides op4j with a way of creating a map entry from each of the list's elements.
+
+`MapBuilder` looks like this:
+
+```java
+public abstract class MapBuilder<T,K,V> implements IFunction<T,Map.Entry<K,V>> {
+    public abstract K buildKey(final T target);
+    public abstract V buildValue(final T target);
+    ...
+}
+```
+
+Let's use it for creating our singleton map:
+
+```java
+MapBuilder<String,Integer,Calendar> mapBuilder = ...;
+Map<Integer,Calendar> map = Op.on(str).intoSingletonMap(mapBuilder).get();
+```
+
+#### Zipping key or value
+
+The singleton map can also be created by zipping. This means either considering the generic operator's target object as a key and then adding (zipping) a value, or the opposite.
+
+Let's add the value:
+
+```java
+// map = {{1="a"}}
+Map<Integer,String> map = Op.on(1).zipValue("a").get();
+```
+
+Or the contrary:
+
+```java
+// map = {{"a"=1}}
+Map<String,Integer> map = Op.on(1).zipKey("a").get();
+```
+
+Alternatively, a function can be used for evaluating the target object and obtaining the zipped key or value:
+
+```java
+IFunction<Integer,String> valueEvaluatorFn = ...;
+Map<Integer,String> map = Op.on(1).zipValueBy(valueEvaluatorFn).get();
+```
+
+```java
+IFunction<Integer,String> keyEvaluatorFn = ...;
+Map<String,Integer> map = Op.on(1).zipKeyBy(keyEvaluatorFn).get();
+```
+
+---
+
+## 4. Executing functions
+
+In generic operators, functions are executed the usual way:
+
+```java
+String upperStr = Op.on("a String").exec(FnString.toUpperCase()).get();
+```
+
+A condition can be added for *null-saving* a function execution, if needed:
+
+```java
+String upperStr = Op.on(str).execIfNotNull(FnString.toUpperCase()).get();
+```
+
+---
+
+## 5. Selecting (conditional code)
+
+op4j allows the conditional execution of actions. Once the condition (an action starting with `"if"`) is executed, all subsequent actions will apply only on the target object only if it has been selected (condition was true).
+
+For example, lets convert into upper case only if the String value is not "uncapitalizable".
+
+```java
+String upper = 
+    Op.on(str).ifTrue(FnString.notEq("uncapitalizable")).exec(FnString.toUpperCase()).get();
+```
+
+As usual, selections can be ended with `endIf(...)`:
+
+```java
+Op.on(...).ifTrue(...).[ACTIONS ON SELECTED ELEMENTS].endIf()...
+```
+
+### Types of selection actions
+
+Selection can be based on the nullity of the target:
+
+```java
+Op.on(...).ifNull()....
+Op.on(...).ifNotNull()....
+```
+
+And also on the value returned by the evaluation of a function returning `Boolean`:
+
+```java
+IFunction<T,Boolean> eval = ...;
+Op.on(...).ifTrue(eval)...
+Op.on(...).ifFalse(eval)...
+```
+
+### Restrictions on execution actions after selection
+
+After executing a selection action, function executed by means of an `exec` action cannot change the operator type.
+
+So this would not be valid:
+
+```java
+// Will not compile!
+Integer intObj = 
+    Op.on(str).ifTrue(FnString.notEq("-")).exec(FnString.toInteger()).get();
+```
+
+...because converting the operator target only *sometimes* (if some condition is true) means that the real type of the target object cannot be known after executing.
+
+---
+
+## 6. Replacing
+
+Operator targets can be replaced by other objects:
+
+```java
+String newString = 
+    Op.on(str).ifNull().replaceWith("[no value]").get();
+```
+
+...which is equivalent to:
+
+```java
+String newString = 
+    Op.on(str).replaceIfNotNullWith("[no value]").get();
+```
