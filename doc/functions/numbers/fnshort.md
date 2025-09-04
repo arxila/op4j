@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-**[FnShort](http://www.op4j.org/apidocs/org/op4j/functions/FnShort.html)** is a *function hub class* containing many static methods to work with `Short` objects. These methods return functions that take a `Short` object as input or output, including conversions to `String` and logical operations between `Short` objects, among others.
+`FnShort` is a *function hub class* containing many static methods to work with `Short` objects. These methods return functions that take a `Short` object as input or output, including conversions to `String` and logical operations between `Short` objects, among others.
 
 ## 2. Functions
 
@@ -47,6 +47,3 @@
 | toPercentStr       | Function<Short,String>      | —<br>boolean groupingUsed<br>Locale locale<br>String locale<br>Locale locale, boolean groupingUsed<br>String locale, boolean groupingUsed | Returns a String representing a percentage from the target number, with various formatting options. |
 | toStr              | Function<Short,String>      | —<br>boolean groupingUsed<br>Locale locale<br>String locale<br>Locale locale, boolean groupingUsed<br>String locale, boolean groupingUsed | Returns the String representation of the input number, with various formatting options. |
 
----
-
-*For detailed parameter options and formatting, see the [FnShort JavaDoc](http://www.op4j.org/apidocs/org/op4j/functions/FnShort.html).*

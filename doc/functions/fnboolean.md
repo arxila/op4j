@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[FnBoolean](http://www.op4j.org/apidocs/org/op4j/functions/FnBoolean.html) is a *function hub class* containing many static methods returning functions that take a **Boolean** object as input.
+`FnBoolean` is a *function hub class* containing many static methods returning functions that take a `Boolean` object as input.
 
 ---
 

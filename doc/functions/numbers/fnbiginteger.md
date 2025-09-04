@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[FnBigInteger](http://www.op4j.org/apidocs/org/op4j/functions/FnBigInteger.html) is a *function hub class* containing many static methods to work with BigInteger objects. These static methods return functions that take a **BigInteger** object either as input or output (depending on the function). It includes conversions to String, currency representations, and logical operations between BigInteger objects, among others.
+`FnBigInteger` is a *function hub class* containing many static methods to work with BigInteger objects. These static methods return functions that take a `BigInteger` object either as input or output (depending on the function). It includes conversions to String, currency representations, and logical operations between BigInteger objects, among others.
 
 ---
 

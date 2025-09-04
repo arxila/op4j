@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[FnCalendar](http://www.op4j.org/apidocs/org/op4j/functions/FnCalendar.html) is a *function hub class* containing many static methods to work with Calendar objects. These static methods return functions that take a **Calendar** object as input or output (depending on the function). It includes conversions to String, to Calendar, and adding days to a Calendar, among others.
+`FnCalendar` is a *function hub class* containing many static methods to work with Calendar objects. These static methods return functions that take a `Calendar` object as input or output (depending on the function). It includes conversions to String, to Calendar, and adding days to a Calendar, among others.
 
 ---
 

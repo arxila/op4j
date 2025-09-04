@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[FnDate](http://www.op4j.org/apidocs/org/op4j/functions/FnDate.html) is a *function hub class* containing many static methods to work with Date objects. These static methods return functions that take a **Date** object as input or output (depending on the function). It includes conversions to String, to Date, and adding days to a Date, among others.
+`FnDate` is a *function hub class* containing many static methods to work with Date objects. These static methods return functions that take a `Date` object as input or output (depending on the function). It includes conversions to String, to Date, and adding days to a Date, among others.
 
 ---
 

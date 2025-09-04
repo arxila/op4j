@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-**[FnInteger](http://www.op4j.org/apidocs/org/op4j/functions/FnInteger.html)** is a *function hub class* containing a lot of static methods to work with Integer objects. Those static methods return functions that take an **Integer** object either as its input or output (depending on the function). It includes conversions to String, to a String representing a currency, and logical operations between Integer objects among others.
+`FnInteger` is a *function hub class* containing a lot of static methods to work with Integer objects. Those static methods return functions that take an `Integer` object either as its input or output (depending on the function). It includes conversions to String, to a String representing a currency, and logical operations between Integer objects among others.
 
 ## 2. Functions
 

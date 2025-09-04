@@ -159,7 +159,7 @@ Operators in each of these five branches will offer different actions depending 
 The **array operators branch** will be activated if:
 
 - `Op.on(input)` is called being `input` an array variable.
-- `Op.onArrayOf(type, input)` is called being `input` an array variable and `type` the [javaRuntype](http://www.javaruntype.org) `Type` object representing the array's elements (e.g: `Op.onArrayOf(Types.STRING, myStrArr)`).
+- `Op.onArrayOf(type, input)` is called being `input` an array variable and `type` the [javaRuntype](https://javaruntype.arxila.io) `Type` object representing the array's elements (e.g: `Op.onArrayOf(Types.STRING, myStrArr)`).
 - `Op.onArrayFor(e1, e2, e3...)` is called being `e1`, `e2`, `e3`... the elements on which the expression will be created, treating them as an array.
 - `Fn.onArrayOf(type)` is called being `type` the type of the elements of the arrays that will be passed as input to the defined function.
 - The `asArrayOf(type)` action is called from a generic operator. This action represents a cast operation.
@@ -235,7 +235,7 @@ output = function.execute(input);
 
 ## 7. Types
 
-op4j is tightly integrated with the [javaRuntype project](http://www.javaruntype.org), which in fact was born as a part of op4j (later separated as a project on its own during development).
+op4j is tightly integrated with the [javaRuntype project](https://javaruntype.arxila.io), which in fact was born as a part of op4j (later separated as a project on its own during development).
 
 javaRuntype offers a runtime type system which fits perfectly the need op4j has for being able to specify types (for example, of a list's elements) including their type parameters (the so-called *generics*), which is something not covered by the standard `java.lang.Class` objects.
 

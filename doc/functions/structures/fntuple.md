@@ -2,9 +2,9 @@
 
 ## 1. Overview
 
-[`FnTuple`](http://www.op4j.org/apidocs/org/op4j/functions/FnTuple.html) is a *function hub class* containing methods to work with tuples in op4j (pairs, triplets, etc.). It allows the creation of tuples from n input functions (where n may be two, three, etc., depending on the tuple type) and provides utility functions to check if a tuple contains an object, extract data from a tuple, and more.
+`FnTuple` is a *function hub class* containing methods to work with tuples in op4j (pairs, triplets, etc.). It allows the creation of tuples from n input functions (where n may be two, three, etc., depending on the tuple type) and provides utility functions to check if a tuple contains an object, extract data from a tuple, and more.
 
-Tuple objects created belong to the JavaTuples open source project. See [JavaTuples](http://javatuples.org/) for further information.
+Tuple objects created belong to the JavaTuples open source project. See [JavaTuples](https://javatuples.arxila.io/) for further information.
 
 ## 2. Functions
 
@@ -42,6 +42,3 @@ Tuple objects created belong to the JavaTuples open source project. See [JavaTup
 | tripletWith      | Function<X,Triplet<A,B,C>>                 | Function<? super X,A> value0Function<br>Function<? super X,B> value1Function<br>Function<? super X,C> value2Function |             |
 | unitWith         | Function<X,Unit<A>>                        | Function<? super X,A> value0Function                                   |             |
 
----
-
-For more details and usage examples, refer to the [op4j FnTuple API documentation](http://www.op4j.org/apidocs/org/op4j/functions/FnTuple.html) and the [JavaTuples project](http://javatuples.org/).

@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-**[FnFunc](http://www.op4j.org/apidocs/org/op4j/functions/FnFunc.html)** is a *function hub class* containing basic static methods that operate on Objects.
+`FnFunc` is a *function hub class* containing basic static methods that operate on Objects.
 
 ## 2. Functions
 

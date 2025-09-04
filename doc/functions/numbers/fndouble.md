@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[FnDouble](http://www.op4j.org/apidocs/org/op4j/functions/FnDouble.html) is a *function hub class* containing many static methods to work with Double objects. These static methods return functions that take a **Double** object as input or output (depending on the function). It includes conversions to String, currency representations, and logical operations between Double objects, among others.
+`FnDouble` is a *function hub class* containing many static methods to work with Double objects. These static methods return functions that take a `Double` object as input or output (depending on the function). It includes conversions to String, currency representations, and logical operations between Double objects, among others.
 
 ---
 

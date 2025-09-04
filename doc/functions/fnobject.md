@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-**[FnObject](http://www.op4j.org/apidocs/org/op4j/functions/FnObject.html)** is a *function hub class* containing a lot of static methods to work with Objects in general.
+`FnObject` is a *function hub class* containing a lot of static methods to work with Objects in general.
 
 ## 2. Functions
 
@@ -36,6 +36,3 @@
 | toStr                 | Function<Object,String>     | — | Converts the target object to String using the default `toString()` method. |
 | toStrNullSafe         | Function<Object,String>     | — | Converts the target object to String using the default `toString()` method, returning null if target is null. |
 
----
-
-*For detailed parameter options and formatting, see the [FnObject JavaDoc](http://www.op4j.org/apidocs/org/op4j/functions/FnObject.html).*

@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-**[FnNumber](http://www.op4j.org/apidocs/org/op4j/functions/FnNumber.html)** is a *function hub class* containing a lot of static methods to work with `Number` objects. These static methods return functions that deal with `Number` objects, including conversions to `String`, currency formatting, rounding functions, and more.
+`FnNumber` is a *function hub class* containing a lot of static methods to work with `Number` objects. These static methods return functions that deal with `Number` objects, including conversions to `String`, currency formatting, rounding functions, and more.
 
 ## 2. Functions
 
@@ -43,6 +43,3 @@
 | toShort            | Function<Number,Short>      | —<br>RoundingMode roundingMode | Converts the input into a Short, optionally using rounding mode. |
 | toStr              | Function<Number,String>     | Various locale, digit, grouping, separator, and formatting options | Returns the String representation of the input number, with extensive formatting options. |
 
----
-
-*For detailed parameter options and formatting, see the [FnNumber JavaDoc](http://www.op4j.org/apidocs/org/op4j/functions/FnNumber.html).*

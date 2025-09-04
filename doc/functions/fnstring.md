@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[`FnString`](http://www.op4j.org/apidocs/org/op4j/functions/FnString.html) is a *function hub class* containing many static methods returning functions that take a **String** object as input. It includes conversions to numbers, calendar, and escape functions among others.
+`FnString` is a *function hub class* containing many static methods returning functions that take a `String` object as input. It includes conversions to numbers, calendar, and escape functions among others.
 
 ## 2. Functions
 
@@ -187,6 +187,3 @@
 | unescapeJavaScript   | Function<String,String>        |                               | Unescapes JavaScript literals in String. |
 | unescapeXML          | Function<String,String>        |                               | Unescapes XML entities to Unicode characters. |
 
----
-
-For detailed descriptions and parameter options, refer to the [op4j FnString API documentation](http://www.op4j.org/apidocs/org/op4j/functions/FnString.html).

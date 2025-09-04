@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-**[FnFloat](http://www.op4j.org/apidocs/org/op4j/functions/FnFloat.html)** is a *function hub class* containing a lot of static methods to work with Float objects. Those static methods return functions that take a **Float** object either as its input or output (depending on the function). It includes conversions to String, to a String representing a currency, and logical operations between Float objects among others.
+`FnFloat` is a *function hub class* containing a lot of static methods to work with Float objects. Those static methods return functions that take a `Float` object either as its input or output (depending on the function). It includes conversions to String, to a String representing a currency, and logical operations between Float objects among others.
 
 ## 2. Functions
 

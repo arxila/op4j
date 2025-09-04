@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-**[FnLong](http://www.op4j.org/apidocs/org/op4j/functions/FnLong.html)** is a *function hub class* containing a lot of static methods to work with Long objects. Those static methods return functions that take a **Long** object either as its input or output (depending on the function). It includes conversions to String, to a String representing a currency, and logical operations between Long objects among others.
+`FnLong` is a *function hub class* containing a lot of static methods to work with Long objects. Those static methods return functions that take a `Long` object either as its input or output (depending on the function). It includes conversions to String, to a String representing a currency, and logical operations between Long objects among others.
 
 ## 2. Functions
 

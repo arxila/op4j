@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[**FnSet**](http://www.op4j.org/apidocs/org/op4j/functions/FnSet.html) is a *parameterizable function hub class*. Before accessing the actual functions, you must specify the type parameter, which gives you access to operations on Sets:
+`FnSet` is a *parameterizable function hub class*. Before accessing the actual functions, you must specify the type parameter, which gives you access to operations on `Set`s:
 
 - `FnSet.ofBigDecimal()` → FnSetOf<BigDecimal>
 - `FnSet.ofBigInteger()` → FnSetOf<BigInteger>
@@ -136,6 +136,3 @@ Op.onSetFor(Op.onSetFor("first", "second").get(), Op.onSetFor("third").get())
 |----------------|-----------------------------------|--------|-------------|
 | flattenSets    | Function<Set<Set<T>>,Set<T>>      | —      |             |
 
----
-
-*For detailed parameter options and formatting, see the [FnSet JavaDoc](http://www.op4j.org/apidocs/org/op4j/functions/FnSet.html).*

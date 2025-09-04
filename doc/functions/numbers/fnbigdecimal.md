@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[FnBigDecimal](http://www.op4j.org/apidocs/org/op4j/functions/FnBigDecimal.html) is a *function hub class* containing many static methods to work with BigDecimal objects. These static methods return functions that take a **BigDecimal** object either as input or output (depending on the function). It includes conversions to String, currency representations, and logical operations between BigDecimal objects, among others.
+`FnBigDecimal` is a *function hub class* containing many static methods to work with BigDecimal objects. These static methods return functions that take a `BigDecimal` object either as input or output (depending on the function). It includes conversions to String, currency representations, and logical operations between BigDecimal objects, among others.
 
 ---
 

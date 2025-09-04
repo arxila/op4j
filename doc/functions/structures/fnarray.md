@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[`FnArray`](http://www.op4j.org/apidocs/org/op4j/functions/FnArray.html) is a *parameterizable function hub class*. Before accessing the actual functions, you must specify the type parameter, which gives you access to operations on **Arrays**:
+`FnArray` is a *parameterizable function hub class*. Before accessing the actual functions, you must specify the type parameter, which gives you access to operations on **Arrays**:
 
 - `FnArray.ofBigDecimal()`: returns [FnArrayOf<BigDecimal>](#fnarrayof)
 - `FnArray.ofBigInteger()`: returns [FnArrayOf<BigInteger>](#fnarrayof)

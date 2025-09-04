@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-[**FnList**](http://www.op4j.org/apidocs/org/op4j/functions/FnList.html) is a *parameterizable function hub class*. Before accessing the real functions, you must specify the type parameter, which gives you access to operations on *Lists*:
+`FnList` is a *parameterizable function hub class*. Before accessing the real functions, you must specify the type parameter, which gives you access to operations on `List`s:
 
 - `FnList.ofBigDecimal()` → FnListOf<BigDecimal>
 - `FnList.ofBigInteger()` → FnListOf<BigInteger>
