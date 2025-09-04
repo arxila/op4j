@@ -63,7 +63,6 @@ public abstract class AbstractNotNullFunction<T, R> extends Function<T, R> {
      * @param input the target object
      * @param ctx the execution context
      * @return the result of the function execution
-     * @throws Exception
      */
     protected abstract R notNullExecute(final T input, final ExecCtx ctx) throws Exception;
     

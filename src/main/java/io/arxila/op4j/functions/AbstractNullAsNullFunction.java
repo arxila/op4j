@@ -61,7 +61,6 @@ public abstract class AbstractNullAsNullFunction<T,R> extends Function<T,R> {
      * @param input the target object
      * @param ctx the execution context
      * @return the result of the function executionO
-     * @throws Exception
      */
     protected abstract R nullAsNullExecute(final T input, final ExecCtx ctx) throws Exception;
     

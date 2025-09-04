@@ -24,7 +24,7 @@ import io.arxila.javaruntype.type.Type;
 
 /**
  * <p>
- * This interface contains methods for casts to map (Map<K,V>).
+ * This interface contains methods for casts to map (Map&lt;K,V&gt;).
  * </p>
  * 
  * @since 1.0

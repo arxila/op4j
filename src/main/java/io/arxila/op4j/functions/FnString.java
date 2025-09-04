@@ -1351,7 +1351,7 @@ public final class FnString {
      * From its definition:
      * </p>
      * <ul>
-     *   <li>For example: <tt>"bread" &amp; "butter"</tt> =>
+     *   <li>For example: <tt>"bread" &amp; "butter"</tt> =&gt;
      *       <tt>&amp;quot;bread&amp;quot; &amp;amp; &amp;quot;butter&amp;quot;</tt>.</li>
      *   <li>Supports only the five basic XML entities (gt, lt, quot, amp, apos).
      *       Does not support DTDs or external entities.</li>
@@ -1848,7 +1848,7 @@ public final class FnString {
     /**
      * <p>
      * Determines whether the target object is greater than the specified object
-     * in value, this is, whether <tt>target.compareTo(object) > 0</tt>. Both
+     * in value, this is, whether <tt>target.compareTo(object) &gt; 0</tt>. Both
      * the target and the specified object have to implement {@link Comparable}.
      * </p>
      * 
@@ -1864,7 +1864,7 @@ public final class FnString {
     /**
      * <p>
      * Determines whether the target object is greater or equal to the specified object
-     * in value, this is, whether <tt>target.compareTo(object) >= 0</tt>. Both
+     * in value, this is, whether <tt>target.compareTo(object)  &gt;= 0</tt>. Both
      * the target and the specified object have to implement {@link Comparable}.
      * </p>
      * 
@@ -3397,7 +3397,7 @@ public final class FnString {
      * If this method returns false, {@link FnString#toLong(int)} will throw an exception if called.
      * </p>
      * 
-     * @param radixthe radix being used by the String
+     * @param radix the radix being used by the String
      * @return true if the input {@link String} represents a valid {@link Long}. 
      * Otherwise, false
      * 
@@ -4291,7 +4291,7 @@ public final class FnString {
      * 
      * @param prefix the prefix to be search after the specified offset
      * @param offset where to begin looking for the prefix
-     * @return
+     * @return true if the input {@link String} starts with the specified prefix, taken from the offset
      */
     public static final Function<String, Boolean> startsWith(final String prefix, final int offset) {
         return new StartsWith(prefix, offset);
@@ -4426,7 +4426,7 @@ public final class FnString {
     /**
      * <p>
      * Returns whether the target {@link String} is empty or not. It calls 
-     * {@link StringUtils#isEmpty(String)}. The string is empty if it is "" 
+     * {@link StringUtils#isEmpty(CharSequence)}. The string is empty if it is ""
      * or null
      * </p>
      * 
@@ -4439,7 +4439,7 @@ public final class FnString {
     /**
      * <p>
      * Returns whether the target {@link String} is blank or not. It calls 
-     * {@link StringUtils#isBlank(String)}. The string is blank if it is
+     * {@link StringUtils#isBlank(CharSequence)}. The string is blank if it is
      * whitespace, empty ("") or null.
      * </p>
      * 

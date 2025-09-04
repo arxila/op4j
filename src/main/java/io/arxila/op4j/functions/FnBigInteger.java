@@ -229,7 +229,7 @@ public final class FnBigInteger {
      * either using grouping or not depending on the given parameter. So,
      * </p>
      * <code>toPercentStr(true) would return 100,000% if target number is 1000</code>
-     * <br />
+     * <br>
      * <code>toPercentStr(false) would return 100000% if target number is 1000</code>
      * 
      * @param groupingUsed whether or not grouping will be used
@@ -408,7 +408,7 @@ public final class FnBigInteger {
     /**
      * <p>
      * Determines whether the target object is greater than the specified object
-     * in value, this is, whether <tt>target.compareTo(object) > 0</tt>. Both
+     * in value, this is, whether <tt>target.compareTo(object) &gt; 0</tt>. Both
      * the target and the specified object have to implement {@link Comparable}.
      * </p>
      * 
@@ -589,7 +589,7 @@ public final class FnBigInteger {
      * <p>
      * Determines whether the result of executing the specified function
      * on the target object is greater than the specified object parameter
-     * in value, this is, whether <tt>functionResult.compareTo(object) > 0</tt>. Both
+     * in value, this is, whether <tt>functionResult.compareTo(object) &gt; 0</tt>. Both
      * the target and the specified object have to implement {@link Comparable}.
      * </p>
      * 

@@ -35,7 +35,7 @@ public interface NavigableMapOperator<K,V>  {
     /**
      * <p>
      * Iterates the target map's entries. After executing this method, any further operations
-     * will be applied on each of the map entries (java.util.Map.Entry<?,?> objects) until 
+     * will be applied on each of the map entries (java.util.Map.Entry&lt;?,?&gt; objects) until
      * an "endFor()" method is called.
      * </p>
      * 

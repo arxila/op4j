@@ -24,7 +24,7 @@ import io.arxila.javaruntype.type.Type;
 
 /**
  * <p>
- * This interface contains methods for casts to set (Set<T>).
+ * This interface contains methods for casts to set (Set&lt;T&gt;).
  * </p>
  * 
  * @since 1.0

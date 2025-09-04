@@ -39,14 +39,14 @@ package io.arxila.op4j.functions;
  * <p>
  * Functions can be created anonymously:
  * </p>
- * <pre>
+ * <pre>{@code
  * String result = 
  *   Op.on(value).exec(new IFunction<Integer,String>() {
  *       public String execute(Integer input, ExecCtx ctx) throws Exception {
  *          return "The input number is: " + input;
  *       }
  *   }).get();
- * </pre>
+ * }</pre>
  * <p>
  * If you are creating a <i>function class</i> (instead of an anonymous implementation),
  * you should consider extending the {@link Function} abstract class, which
@@ -81,7 +81,6 @@ public interface IFunction<T,R> {
      * @param input the target object on which the function is to be executed
      * @param ctx the context (metadata) for the function execution
      * @return the result of executing the function
-     * @throws Exception 
      */
     public R execute(final T input, final ExecCtx ctx) throws Exception;
 
