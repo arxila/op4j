@@ -1,11 +1,18 @@
 Change Log
 ==========
 
-1.1.1
+1.2.1
 -----
 
 * Code cleanup. Adopted io.arxila namespace.
 
+
+1.2
+-----
+
+* Fixed conversion of BigDecimals to Floats and Doubles.
+* Fixed isValidDoubleTest result when applied on negative integer.
+ 
 
 1.1
 ---
