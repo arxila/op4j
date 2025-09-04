@@ -1,6 +1,7 @@
 .classpath
 .project
 target/
+!src/**/target/
 bin/
 .settings/
 .idea/
