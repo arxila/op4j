@@ -1,6 +1,6 @@
  
- Using javaruntype from Maven 2+
- -------------------------------
+ Using op4j from Maven 2+
+ ------------------------
 
 
  To use it in your Maven 2+ applications, you will need to add it as
