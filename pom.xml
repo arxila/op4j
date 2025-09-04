@@ -35,7 +35,7 @@
   <groupId>io.arxila.op4j</groupId>
   <artifactId>op4j</artifactId>
   <packaging>jar</packaging>
-  <version>1.2.1</version>
+  <version>1.2.2-SNAPSHOT</version>
   <name>op4j</name>
   <description>A pre-JDK8 implementation of a Java fluent / streaming programming style</description>
 
